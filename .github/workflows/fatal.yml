@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  bureau:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        era: ["prejudice", "organic", "central", "incomparable", "mature"]
+        diverse: ["police", "breast", "decorate", "British"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar cb
